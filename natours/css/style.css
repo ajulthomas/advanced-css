@@ -6,3 +6,128 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+
+/*
+basic reset
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  padding: 1%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+}
+
+.header {
+  height: 95vh;
+  position: relative;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(40, 180, 133, 0.8),
+      rgba(126, 213, 111, 0.8)
+    ),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+}
+
+.logo-container {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.logo {
+  height: 35px;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.heading {
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 4rem;
+}
+
+.primary-text {
+  display: block;
+  font-size: 3rem;
+  font-weight: 350;
+  letter-spacing: 1.4rem;
+  animation: moveInLeft 1.5s ease-in;
+  /* backface-visibility: hidden; */
+}
+
+.sub-text {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.72rem;
+  animation: moveInRight 1.5s ease-in;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    opacity: 0.8;
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    opacity: 0.8;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.button-white:link,
+.button-white:visited {
+  display: inline-block;
+  color: #777;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 500px;
+}
+
+.button-white:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.button-white:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
